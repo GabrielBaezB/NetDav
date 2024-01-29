@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_28_210156) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_28_230830) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "codigo"
+    t.string "nombre"
+    t.string "correo"
+    t.string "telefono"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contrato_combo_paquetes", force: :cascade do |t|
+    t.bigint "cliente_id", null: false
+    t.string "combo_paquete"
+    t.integer "cantidad"
+    t.decimal "valor"
+    t.datetime "fecha_contratacion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_contrato_combo_paquetes_on_cliente_id"
+  end
+
+  create_table "contrato_servicios", force: :cascade do |t|
+    t.bigint "cliente_id", null: false
+    t.string "servicio"
+    t.integer "cantidad"
+    t.decimal "valor_individual"
+    t.datetime "fecha_contratacion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_contrato_servicios_on_cliente_id"
+  end
+
+  create_table "promocions", force: :cascade do |t|
+    t.string "nombre"
+    t.boolean "estado"
+    t.daterange "fecha_vigencia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_28_210156) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contrato_combo_paquetes", "clientes"
+  add_foreign_key "contrato_servicios", "clientes"
 end

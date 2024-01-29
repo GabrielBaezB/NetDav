@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @contrato_servicio %>
+
+<div>
+  <%= link_to "Edit this contrato servicio", edit_contrato_servicio_path(@contrato_servicio) %> |
+  <%= link_to "Back to contrato servicios", contrato_servicios_path %>
+
+  <%= button_to "Destroy this contrato servicio", @contrato_servicio, method: :delete %>
+</div>

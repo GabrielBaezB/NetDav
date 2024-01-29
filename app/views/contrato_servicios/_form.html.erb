@@ -1,0 +1,42 @@
+<%= form_with(model: contrato_servicio) do |form| %>
+  <% if contrato_servicio.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contrato_servicio.errors.count, "error") %> prohibited this contrato_servicio from being saved:</h2>
+
+      <ul>
+        <% contrato_servicio.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :cliente_id, style: "display: block" %>
+    <%= form.text_field :cliente_id %>
+  </div>
+
+  <div>
+    <%= form.label :servicio, style: "display: block" %>
+    <%= form.text_field :servicio %>
+  </div>
+
+  <div>
+    <%= form.label :cantidad, style: "display: block" %>
+    <%= form.number_field :cantidad %>
+  </div>
+
+  <div>
+    <%= form.label :valor_individual, style: "display: block" %>
+    <%= form.text_field :valor_individual %>
+  </div>
+
+  <div>
+    <%= form.label :fecha_contratacion, style: "display: block" %>
+    <%= form.datetime_field :fecha_contratacion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

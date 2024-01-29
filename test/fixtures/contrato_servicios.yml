@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente: one
+  servicio: MyString
+  cantidad: 1
+  valor_individual: 9.99
+  fecha_contratacion: 2024-01-28 23:07:52
+
+two:
+  cliente: two
+  servicio: MyString
+  cantidad: 1
+  valor_individual: 9.99
+  fecha_contratacion: 2024-01-28 23:07:52

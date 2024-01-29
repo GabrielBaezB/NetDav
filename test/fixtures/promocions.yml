@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  estado: false
+  fecha_vigencia: 
+
+two:
+  nombre: MyString
+  estado: false
+  fecha_vigencia: 

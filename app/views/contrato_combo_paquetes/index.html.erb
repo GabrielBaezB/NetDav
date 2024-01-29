@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Contrato combo paquetes</h1>
+
+<div id="contrato_combo_paquetes">
+  <% @contrato_combo_paquetes.each do |contrato_combo_paquete| %>
+    <%= render contrato_combo_paquete %>
+    <p>
+      <%= link_to "Show this contrato combo paquete", contrato_combo_paquete %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New contrato combo paquete", new_contrato_combo_paquete_path %>
