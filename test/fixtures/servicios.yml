@@ -2,10 +2,8 @@
 
 one:
   nombre: MyString
-  estado: false
-  fecha_vigencia: 
+  valor: 9.99
 
 two:
   nombre: MyString
-  estado: false
-  fecha_vigencia: 
+  valor: 9.99

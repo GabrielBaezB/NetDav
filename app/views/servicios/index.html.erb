@@ -1,0 +1,22 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+
+<h1>Servicios</h1>
+<%= link_to "New servicio" , new_servicio_path %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Valor</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+
+    <tbody id="servicios">
+      <% @servicios.each do |servicio| %>
+        <%= render partial: 'servicio' , locals: { servicio: servicio} %>
+          <% end %>
+    </tbody>
+  </table>

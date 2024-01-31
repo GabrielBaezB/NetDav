@@ -1,0 +1,18 @@
+<tr id="<%= dom_id servicio %>">
+  <td class="table-primary">
+    <%= servicio.nombre %>
+  </td>
+  <td class="table-primary">
+    <%= servicio.valor %>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Edit this servicio" , edit_servicio_path(servicio) %>
+  </td>
+  <td class="table-warning">
+    <%= button_to "Destroy this servicio" , servicio, method: :delete %>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Show this servicio" , servicio %>
+  </td>
+
+</tr>

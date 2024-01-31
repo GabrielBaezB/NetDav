@@ -1,22 +1,23 @@
-<div id="<%= dom_id cliente %>">
-  <p>
-    <strong>Codigo:</strong>
+<tr id="<%= dom_id cliente %>">
+  <td class="table-warning">
     <%= cliente.codigo %>
-  </p>
-
-  <p>
-    <strong>Nombre:</strong>
+  </td>
+  <td class="table-warning">
     <%= cliente.nombre %>
-  </p>
-
-  <p>
-    <strong>Correo:</strong>
-    <%= cliente.correo %>
-  </p>
-
-  <p>
-    <strong>Telefono:</strong>
+  </td>
+  <td class="table-warning">
+    <%= cliente.datocorreo %>
+  </td>
+  <td class="table-warning">
     <%= cliente.telefono %>
-  </p>
-
-</div>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Edit this cliente" , edit_cliente_path(cliente) %>
+  </td>
+  <td class="table-warning">
+    <%= button_to "Destroy this cliente" , cliente, method: :delete %>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Show this cliente" , cliente %>
+  </td>
+</tr>

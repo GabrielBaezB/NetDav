@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Clientes</h1>
-
-<div id="clientes">
-  <% @clientes.each do |cliente| %>
-    <%= render cliente %>
-    <p>
-      <%= link_to "Show this cliente", cliente %>
-    </p>
-  <% end %>
-</div>
-
 <%= link_to "New cliente", new_cliente_path %>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Telefono</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody id="clientes">
+    <% @clientes.each do |cliente| %>
+      <%= render partial: 'cliente', locals: { cliente: cliente } %>
+    <% end %>
+  </tbody>
+</table>

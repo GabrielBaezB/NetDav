@@ -15,7 +15,7 @@ class ClientesTest < ApplicationSystemTestCase
     click_on "New cliente"
 
     fill_in "Codigo", with: @cliente.codigo
-    fill_in "Correo", with: @cliente.correo
+    fill_in "datocorreo", with: @cliente.datocorreo
     fill_in "Nombre", with: @cliente.nombre
     fill_in "Telefono", with: @cliente.telefono
     click_on "Create Cliente"
@@ -29,7 +29,7 @@ class ClientesTest < ApplicationSystemTestCase
     click_on "Edit this cliente", match: :first
 
     fill_in "Codigo", with: @cliente.codigo
-    fill_in "Correo", with: @cliente.correo
+    fill_in "datocorreo", with: @cliente.datocorreo
     fill_in "Nombre", with: @cliente.nombre
     fill_in "Telefono", with: @cliente.telefono
     click_on "Update Cliente"

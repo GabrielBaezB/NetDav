@@ -3,11 +3,11 @@
 one:
   codigo: MyString
   nombre: MyString
-  correo: MyString
+  datocorreo: MyString
   telefono: MyString
 
 two:
   codigo: MyString
   nombre: MyString
-  correo: MyString
+  datocorreo: MyString
   telefono: MyString
