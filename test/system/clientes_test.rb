@@ -14,7 +14,6 @@ class ClientesTest < ApplicationSystemTestCase
     visit clientes_url
     click_on "New cliente"
 
-    fill_in "Codigo", with: @cliente.codigo
     fill_in "datocorreo", with: @cliente.datocorreo
     fill_in "Nombre", with: @cliente.nombre
     fill_in "Telefono", with: @cliente.telefono
@@ -28,7 +27,6 @@ class ClientesTest < ApplicationSystemTestCase
     visit cliente_url(@cliente)
     click_on "Edit this cliente", match: :first
 
-    fill_in "Codigo", with: @cliente.codigo
     fill_in "datocorreo", with: @cliente.datocorreo
     fill_in "Nombre", with: @cliente.nombre
     fill_in "Telefono", with: @cliente.telefono

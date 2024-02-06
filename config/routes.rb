@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :accs
   resources :servicios
   resources :clientes
   devise_for :users

@@ -1,0 +1,26 @@
+<tr id="<%= dom_id acc %>">
+  <td class="table-warning">
+    <%= acc.id %>
+  </td>
+  <td class="table-warning">
+    <%= acc.nombre_de_cuentas %>
+  </td>
+  <td class="table-warning">
+    <%= acc.contrasena %>
+  </td>
+  <td class="table-warning">
+    <%= acc.perfiles %>
+  </td>
+  <td class="table-warning">
+    <%= acc.facturacion %>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Edit this Acc" , edit_acc_path(acc) %>
+  </td>
+  <td class="table-warning">
+    <%= button_to "Destroy this acc" , acc, method: :delete %>
+  </td>
+  <td class="table-warning">
+    <%= link_to "Show this acc" , acc %>
+  </td>
+</tr>

@@ -1,0 +1,37 @@
+<%= form_with(model: acc) do |form| %>
+  <% if acc.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(acc.errors.count, "error") %> prohibited this acc from being saved:</h2>
+
+      <ul>
+        <% acc.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nombre_de_cuentas, style: "display: block" %>
+    <%= form.text_field :nombre_de_cuentas %>
+  </div>
+
+  <div>
+    <%= form.label :contrasena, style: "display: block" %>
+    <%= form.text_field :contrasena %>
+  </div>
+
+  <div>
+    <%= form.label :perfiles, style: "display: block" %>
+    <%= form.text_field :perfiles %>
+  </div>
+
+  <div>
+    <%= form.label :facturacion, style: "display: block" %>
+    <%= form.text_field :facturacion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

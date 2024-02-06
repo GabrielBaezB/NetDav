@@ -1,0 +1,25 @@
+<p style="color: green">
+  <%= notice %>
+</p>
+
+<h1>Accs</h1>
+<%= link_to "New acc" , new_acc_path %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Cuenta</th>
+        <th>Password</th>
+        <th>Perfiles</th>
+        <th>Facturacion</th>
+        <th>Dias Restantes</th>
+      </tr>
+    </thead>
+    <tbody id="accs">
+      <% @accs.each do |acc| %>
+        <%= render partial: 'acc', locals: { acc: acc } %>
+          <% end %>
+    </tbody>
+
+  </table>
